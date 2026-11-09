@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUMA · Tu estilo, con intención | Tienda Online Quito</title>
+  <meta name="description" content="Moda consciente y armario cápsula en Quito con inspiración madrileña. Pagos seguros con Payphone, asesoría de estilo y piezas modulares.">
+  <meta property="og:title" content="LUMA · Tu estilo, con intención">
+  <meta property="og:description" content="Inspírate. Hazlo tuyo. Combínalo más. Colección modular con envíos en Quito y pagos con Payphone.">
+  <link rel="icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar (Dynamic by Admin) -->
+  <aside class="announcement" id="siteAnnouncement" aria-label="Aviso comercial">
+    <div class="announcement-content">
+      <span class="badge-city" id="announcementCity">QUITO · MADRID</span>
+      <span class="announcement-text" id="announcementText">✧ Nueva Cápsula Disponible · Envíos a todo Quito y Valles · Pagos 100% seguros con <strong>Payphone</strong></span>
+      <span class="announcement-tag" id="announcementTag">ENVÍOS GRATIS DESDE $90</span>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand-logo" href="#">
+        <span class="logo-text">LUMA</span>
+        <span class="logo-sub">ESTILO CON INTENCIÓN · QUITO</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#coleccion">Colección</a>
+        <a href="#asesora">LUMA Estudio <sup>✧</sup></a>
+        <a href="#filosofia">Nuestra Mirada</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Admin Dashboard Direct Button (shown only when logged in as admin) -->
+        <button class="action-btn admin-badge-btn" id="adminNavBtn" style="display: none;" aria-label="Panel de Administración">
+          <span>⚙️ Panel Admin</span>
+        </button>
+
+        <!-- Auth Button -->
+        <button class="action-btn auth-trigger" id="authBtn" aria-label="Cuenta de usuario">
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span id="userStatusText">Ingresar</span>
+        </button>
+
+        <!-- Explicit Logout Button (shown whenever any user/admin is logged in) -->
+        <button class="action-btn logout-header-btn" id="logoutHeaderBtn" style="display: none;" aria-label="Cerrar sesión" onclick="logoutUser()">
+          <span>Cerrar Sesión ⎋</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="action-btn bag-btn" id="bagBtn" aria-label="Abrir bolsa de compras">
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="bag-label">Bolsa</span>
+          <span class="bag-counter" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================== -->
+  <!-- FULL-PAGE DEDICATED ADMIN DASHBOARD            -->
+  <!-- ============================================== -->
+  <div id="adminFullPageView" class="admin-full-page" style="display: none;">
+    <!-- Injected dynamically by app.js -->
+  </div>
+
+  <!-- Main Content (Storefront) -->
+  <main id="mainContent">
+
+    <!-- Hero Section (Configurable by Admin) -->
+    <section class="hero-section">
+      <div class="hero-text-block">
+        <div class="capsule-pill" id="heroEyebrow">NUEVA CÁPSULA / MADRID → QUITO</div>
+        <h1 class="hero-title" id="heroTitle">Menos dudas.<br>Más <em>tú.</em></h1>
+        <p class="hero-desc" id="heroDesc">
+          Inspiración madrileña, ritmo quiteño. Prendas esenciales y capas inteligentes pensadas para vestir con calma y combinar con lo que ya tienes.
+        </p>
+        <div class="hero-cta-group">
+          <a class="btn btn-primary" href="#coleccion">Explorar Colección</a>
+          <a class="btn btn-outline" href="#asesora">LUMA Estudio ✧</a>
+        </div>
+        <div class="hero-payphone-badge">
+          <span class="payphone-dot"></span>
+          <span>Pasarela oficial <strong>Payphone Ecuador</strong> integrada · Pagos con tarjeta de crédito y débito</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img id="heroImage" src="assets/editorial.png" alt="Propuesta editorial de moda cápsula LUMA" fetchpriority="high">
+        <div class="visual-card">
+          <div>
+            <strong id="heroCardTitle">El arte de combinar lo simple</strong>
+            <p id="heroCardSubtitle">Piezas modulares adaptables a los microclimas de Quito</p>
+          </div>
+          <span class="pill-number">01 — 06</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Pillars -->
+    <div class="pillars-strip">
+      <div class="pillar-item">
+        <span class="pillar-num">01</span>
+        <div>
+          <strong>Looks que resuelven tu día</strong>
+          <small>Diseñados para oficina, salidas y fin de semana</small>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">02</span>
+        <div>
+          <strong>Compra solo lo que te falte</strong>
+          <small>Elige piezas individuales o el look entero</small>
+        </div>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-num">03</span>
+        <div>
+          <strong>Payphone 100% Protegido</strong>
+          <small>Tarjetas de crédito, débito y transferencias locales</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collection Section -->
+    <section class="collection-section" id="coleccion">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">CÁPSULA ACTIVA · OTOÑO / INVIERNO</span>
+          <h2 class="section-title">¿Qué plan tienes hoy?</h2>
+        </div>
+        <p class="section-subtitle">
+          Prendas versátiles diseñadas en sets combinables. Haz clic en cualquier look para personalizar tus piezas y tallas.
+        </p>
+      </div>
+
+      <!-- Filters & Search Toolbar -->
+      <div class="toolbar">
+        <div class="filter-pills" role="tablist" aria-label="Filtrar colección">
+          <button class="filter-btn active" data-filter="Todos">Todos los looks</button>
+          <button class="filter-btn" data-filter="Madrid">Madrid → Quito ✧</button>
+          <button class="filter-btn" data-filter="Oficina">Oficina resuelta</button>
+          <button class="filter-btn" data-filter="Cotidiano">Día a día</button>
+          <button class="filter-btn" data-filter="Salida">Tengo una salida</button>
+        </div>
+
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Buscar prenda o tejido (ej. blazer, lino)..." aria-label="Buscar en catálogo">
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid" aria-live="polite">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Madrid inspiration banner -->
+      <div class="editorial-quote-box">
+        <div class="quote-content">
+          <h3>De Madrid a tu rutina en Quito</h3>
+          <p>
+            Rayas marineras, denim recto y sastrería relajada reinterpretados con tejidos ligeros y transpirables. Ideales para las mañanas frescas de la sierra ecuatoriana y las tardes templadas.
+          </p>
+          <div class="quote-links">
+            <span>Inspiración visual:</span>
+            <a href="https://ar.pinterest.com/pin/380413499785005326/" target="_blank" rel="noopener noreferrer">Camisa y denim en Madrid ↗</a>
+            <a href="https://br.pinterest.com/pin/madrilenians-in-madrid-on-instagram-pinstripe-blazer-blue-jeans-yellow-sneakers-spotted-at-paseo-de-la-castellana-blazer-de-rayas-pantalones-vaqueros-za--366199013471198404/" target="_blank" rel="noopener noreferrer">Sastrería con zapatillas ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LUMA Estudio (AI Stylist) -->
+    <section class="studio-section" id="asesora">
+      <div class="studio-wrapper">
+        <div class="studio-story">
+          <span class="eyebrow">LUMA ESTUDIO PERSONAL ✧</span>
+          <h2>Tu inspiración.<br>Tu propia <em>versión.</em></h2>
+          <p>
+            No empieces de cero. Cuéntanos qué ocasión tienes en mente, tu presupuesto y qué prendas ya tienes en tu clóset. Te recomendamos la combinación perfecta adaptada a tu clima.
+          </p>
+          <div class="studio-steps-list">
+            <div class="step-card">
+              <span class="step-badge">01</span>
+              <div>
+                <strong>Define tu plan y presupuesto</strong>
+                <p>Calculamos opciones exactas sin exceder tu límite</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-badge">02</span>
+              <div>
+                <strong>Adapta al clima de tu ciudad</strong>
+                <p>Recomendaciones específicas para Quito, Valles o Costa</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-badge">03</span>
+              <div>
+                <strong>Generador de Prompt para IA</strong>
+                <p>Copia instrucciones fotográficas editoriales listas para tus modelos generativos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="studio-form-card">
+          <form id="stylistForm" class="stylist-form">
+            <span class="form-title">CONSULTA TU COMBINACIÓN</span>
+            
+            <div class="form-group">
+              <label for="occasionSelect">¿Para qué ocasión te preparas?</label>
+              <select id="occasionSelect" class="form-control" required>
+                <option value="Oficina">Un día de oficina o reuniones</option>
+                <option value="Cotidiano" selected>Mi día a día / Fin de semana</option>
+                <option value="Salida">Una salida especial o cena</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <div class="label-with-val">
+                <label for="budgetRange">Tu presupuesto aproximado</label>
+                <strong class="budget-display" id="budgetLabel">$90 USD</strong>
+              </div>
+              <input id="budgetRange" type="range" min="30" max="150" value="90" step="5" class="range-slider">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="climateSelect">¿En qué clima estarás?</label>
+                <select id="climateSelect" class="form-control">
+                  <option value="quito">Quito · Templado con viento/lluvia</option>
+                  <option value="valle">Valles (Cumbayá/Tumbaco) · Cálido</option>
+                  <option value="costa">Costa / Clima tropical húmedo</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="moodSelect">Dirección de estilo</label>
+                <select id="moodSelect" class="form-control">
+                  <option>Minimalismo madrileño</option>
+                  <option>Urbano relajado</option>
+                  <option>Elegancia suave</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="ownedPieceSelect">¿Ya tienes alguna prenda similar?</label>
+              <select id="ownedPieceSelect" class="form-control">
+                <option value="none">Quiero ver el look completo desde cero</option>
+                <option value="top">Ya tengo una camisa / top en mi clóset</option>
+                <option value="bottom">Ya tengo un pantalón o falda base</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Calcular Mi Combinación Ideal ✧
+            </button>
+          </form>
+
+          <!-- Studio Results Box -->
+          <div id="studioResults" class="studio-results" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Philosophy -->
+    <section class="philosophy-section" id="filosofia">
+      <div class="philosophy-header">
+        <span class="eyebrow">LA FILOSOFÍA LUMA</span>
+        <h2>El estilo no está en tener más.<br>Está en <em>elegir mejor.</em></h2>
+      </div>
+      <div class="philosophy-grid">
+        <div class="phil-card">
+          <span class="phil-tag">01 / VERSATILIDAD</span>
+          <h3>Una pieza, múltiples vidas</h3>
+          <p>Construimos cada cápsula alrededor de prendas neutras de corte contemporáneo que funcionan tanto en una jornada laboral como en una tarde informal.</p>
+        </div>
+        <div class="phil-card">
+          <span class="phil-tag">02 / CERCANÍA Y TRANSPARENCIA</span>
+          <h3>Inspiración adaptada a Quito</h3>
+          <p>Traducimos tendencias globales en piezas cómodas para nuestra geografía, con tallas reales y precios honestos en dólares.</p>
+        </div>
+        <div class="phil-card">
+          <span class="phil-tag">03 / CONFIANZA TOTAL</span>
+          <h3>Pagos con respaldo Payphone</h3>
+          <p>Tu dinero y tus datos viajan cifrados. Recibe soporte directo por WhatsApp y seguimiento puntual de tu paquete en Pichincha y todo Ecuador.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faq-section" id="preguntas">
+      <div class="faq-inner">
+        <span class="eyebrow">PREGUNTAS FRECUENTES</span>
+        <h2>Todo claro antes de ordenar</h2>
+        
+        <div class="accordion">
+          <details class="faq-item">
+            <summary>¿Cómo funciona la pasarela de pagos Payphone en LUMA?</summary>
+            <div class="faq-content">
+              <p>Payphone es la pasarela líder y más segura de Ecuador. Acepta todas las tarjetas de crédito y débito nacionales e internacionales (Visa, Mastercard, Diners, Discover, American Express) y saldo directo de la app Payphone. Toda la transacción está respaldada por autenticación 3DS y protocolos bancarios cifrados.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Cuánto tarda la entrega en Quito y otras provincias?</summary>
+            <div class="faq-content">
+              <p>En <strong>Quito urbano</strong> y <strong>Valles (Cumbayá, Tumbaco, Los Chillos)</strong> entregamos en 24 a 48 horas laborables con motorizado directo. Para el resto de provincias del Ecuador enviamos por Servientrega en un plazo estimado de 48 a 72 horas.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Puedo comprar solo una parte del look o prendas sueltas?</summary>
+            <div class="faq-content">
+              <p>¡Sí, absolutamente! En LUMA creemos en comprar con intención. Al hacer clic en cualquier look puedes desmarcar las prendas que ya tengas en tu armario y adquirir únicamente la camisa, el blazer o el pantalón que necesites.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Qué política de cambios o devoluciones tienen?</summary>
+            <div class="faq-content">
+              <p>Cuentas con hasta 7 días hábiles posteriores a la entrega para solicitar cambio de talla sin costo adicional en el primer cambio dentro de Quito, siempre que las prendas conserven sus etiquetas y estado original.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo footer-logo">
+          <span class="logo-text">LUMA</span>
+          <span class="logo-sub">ESTILO CON INTENCIÓN</span>
+        </div>
+        <p>Vestir con calma. Vivir a tu manera.<br>Quito, Ecuador.</p>
+        <div class="payphone-accepted">
+          <span>Pagos protegidos por:</span>
+          <img src="https://payphone.app/wp-content/uploads/2021/04/Logo-Payphone-Blanco.png" alt="Payphone Ecuador" class="payphone-logo-img" onerror="this.style.display='none'">
+          <div class="card-icons">
+            <span class="badge-mini">VISA</span>
+            <span class="badge-mini">MASTERCARD</span>
+            <span class="badge-mini">PAYPHONE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <strong>Colección</strong>
+        <ul>
+          <li><a href="#coleccion">Todos los looks</a></li>
+          <li><a href="#coleccion">Cápsula Madrid → Quito</a></li>
+          <li><a href="#coleccion">Esenciales de Oficina</a></li>
+          <li><a href="#asesora">LUMA Estudio ✧</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <strong>Atención al Cliente</strong>
+        <ul>
+          <li><a href="#preguntas">Tiempos de entrega</a></li>
+          <li><a href="#preguntas">Guía de tallas</a></li>
+          <li><a href="#preguntas">Políticas de cambios</a></li>
+          <li><button class="link-btn" id="openAdminBtn">Panel de Control (Admin)</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <strong>Contacto Quito</strong>
+        <p>Atención directa:<br>hola@luma.ec<br>WhatsApp: +593 99 876 5432</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 LUMA · Todos los derechos reservados · Desarrollado con tecnología fullstack y pasarela Payphone.</p>
+      <div class="demo-tag">Modo E-Commerce Activo</div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- MODALS & DRAWERS CONTAINER                     -->
+  <!-- ============================================== -->
+
+  <!-- Universal Modal Backdrop Dialog -->
+  <dialog id="siteDialog" class="site-dialog">
+    <button class="dialog-close-btn" id="dialogCloseBtn" aria-label="Cerrar ventana">×</button>
+    <div id="dialogContent" class="dialog-content">
+      <!-- Dynamic content inserted by app.js -->
+    </div>
+  </dialog>
+
+  <!-- Notification Toast -->
+  <div class="toast-container" id="toastBox" role="status" aria-live="polite"></div>
+
+  <!-- Dedicated Print Container for High Fidelity PDF Invoices (outside dialog to avoid clipping) -->
+  <div id="printReceiptContainer" class="print-receipt-container"></div>
+
+  <!-- JavaScript Application Entry -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,747 @@
+{
+  "users": [
+    {
+      "id": "usr-admin-1",
+      "name": "Administración LUMA",
+      "email": "admin@luma.ec",
+      "phone": "+593 99 123 4567",
+      "passwordHash": "e1c7e2e4e54e25467168145901e9e002:9723fa7df9fcf0c225ec70a843b84ed7bb4017a2d0c312e55fa238198200a9899834c531f9358bf67a319c950fe7fcc6239e6bb5ceb48f0e999715ead0a97b0d",
+      "role": "admin",
+      "createdAt": "2026-10-27T18:02:28.279Z"
+    },
+    {
+      "id": "usr-demo-1",
+      "name": "Sofía Montalvo",
+      "email": "sofia@luma.ec",
+      "phone": "0998765432",
+      "passwordHash": "eb2c2553e96f3819da3f7c177e4ee7bc:9131ec86ee313ad77cd0f9f8f87c4e83a00c73e1be87ffd294bb402ecd1945bcfcfbccd117d8bb46ef6d1df7c57fe30b1e2f6c4802c9b6a27c5f8cb093a2f462",
+      "role": "customer",
+      "address": "González Suárez y San Ignacio, Edificio Panorama Apt 4B",
+      "city": "Quito",
+      "sector": "Quito urbano",
+      "createdAt": "2026-10-27T18:02:28.321Z"
+    },
+    {
+      "id": "usr-0dc4c438",
+      "name": "Valentina Carrera",
+      "email": "valentina@luma.ec",
+      "phone": "0998877665",
+      "passwordHash": "af6d0169d49c3da69d469f547c732a80:40733973803e64eed6027342ee49d1a016c323ea1a6176806e42d789867ba97b613aa3098c41d79ae9192adb537c0521d54ee9df171ab3bca833395e74dec276",
+      "role": "customer",
+      "address": "Av. República del Salvador y Moscú",
+      "sector": "Quito urbano",
+      "city": "Quito",
+      "createdAt": "2026-10-27T18:04:17.895Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-7b289ce6",
+      "orderNumber": "LUMA-363879",
+      "createdAt": "2026-11-04T18:51:27.900Z",
+      "status": "Entregado con éxito",
+      "paymentMethod": "Payphone Ecuador",
+      "paymentDetails": {
+        "mode": "sandbox_simulator",
+        "success": true,
+        "paymentId": "PP-49513865",
+        "clientTransactionId": "LUMA-e8396b28",
+        "authorizationCode": "605881",
+        "cardBrand": "VISA",
+        "lastDigits": "9010",
+        "currency": "USD",
+        "amount": 87.5,
+        "taxes": {
+          "subtotal": 76.09,
+          "tax": 11.41,
+          "total": 87.5,
+          "amountInCents": 8750,
+          "subtotalInCents": 7609,
+          "taxInCents": 1141
+        },
+        "message": "Transacción aprobada satisfactoriamente por Payphone Ecuador (Sandbox)"
+      },
+      "customer": {
+        "userId": "usr-demo-1",
+        "name": "Sofía Montalvo",
+        "email": "sofia@luma.ec",
+        "phone": "0998765432",
+        "address": "González Suárez y San Ignacio, Edificio Panorama Apt 4B",
+        "sector": "Quito urbano",
+        "city": "Quito",
+        "notes": ""
+      },
+      "items": [
+        {
+          "key": "6-item-6-1-M",
+          "lookId": 6,
+          "lookName": "Tarde en Guápulo",
+          "name": "Chaqueta de ante canela",
+          "price": 48,
+          "size": "M",
+          "material": "100% poliéster tacto ante",
+          "image": "assets/letras.png",
+          "qty": 1
+        },
+        {
+          "key": "6-item-6-3-M",
+          "lookId": 6,
+          "lookName": "Tarde en Guápulo",
+          "name": "Pantalón sastre tabaco",
+          "price": 36,
+          "size": "M",
+          "material": "95% algodón, 5% elastano",
+          "image": "assets/letras.png",
+          "qty": 1
+        }
+      ],
+      "subtotal": 84,
+      "shipping": 3.5,
+      "tax": 10.956521739130435,
+      "total": 87.5,
+      "updatedAt": "2026-11-04T18:53:40.912Z"
+    },
+    {
+      "id": "ord-5a103129",
+      "orderNumber": "LUMA-339628",
+      "createdAt": "2026-10-28T20:12:36.301Z",
+      "status": "En camino con motorizado",
+      "paymentMethod": "Payphone Ecuador",
+      "paymentDetails": {
+        "mode": "sandbox_simulator",
+        "success": true,
+        "paymentId": "PP-11509476",
+        "clientTransactionId": "LUMA-0d97e16a",
+        "authorizationCode": "248036",
+        "cardBrand": "VISA",
+        "lastDigits": "9010",
+        "currency": "USD",
+        "amount": 97,
+        "taxes": {
+          "subtotal": 84.35,
+          "tax": 12.65,
+          "total": 97,
+          "amountInCents": 9700,
+          "subtotalInCents": 8435,
+          "taxInCents": 1265
+        },
+        "message": "Transacción aprobada satisfactoriamente por Payphone Ecuador (Sandbox)"
+      },
+      "customer": {
+        "userId": "usr-demo-1",
+        "name": "Sofía Montalvo",
+        "email": "sofia@luma.ec",
+        "phone": "0998765432",
+        "address": "González Suárez y San Ignacio, Edificio Panorama Apt 4B",
+        "sector": "Quito urbano",
+        "city": "Quito",
+        "notes": ""
+      },
+      "items": [
+        {
+          "key": "4-item-4-1-M",
+          "lookId": 4,
+          "lookName": "Una tarde en Las Letras",
+          "name": "Vestido midi negro",
+          "price": 44,
+          "size": "M",
+          "material": "95% algodón rib, 5% elastano",
+          "image": "assets/letras.png",
+          "qty": 1
+        },
+        {
+          "key": "4-item-4-2-M",
+          "lookId": 4,
+          "lookName": "Una tarde en Las Letras",
+          "name": "Cárdigan ligero marfil",
+          "price": 29,
+          "size": "M",
+          "material": "100% algodón suave",
+          "image": "assets/letras.png",
+          "qty": 1
+        },
+        {
+          "key": "4-item-4-3-Única",
+          "lookId": 4,
+          "lookName": "Una tarde en Las Letras",
+          "name": "Bolso burdeos estructurado",
+          "price": 24,
+          "size": "Única",
+          "material": "Poliuretano grabado premium",
+          "image": "assets/letras.png",
+          "qty": 1
+        }
+      ],
+      "subtotal": 97,
+      "shipping": 0,
+      "tax": 12.652173913043478,
+      "total": 97,
+      "updatedAt": "2026-10-28T20:13:11.253Z"
+    },
+    {
+      "id": "ord-ee7132c0",
+      "orderNumber": "LUMA-814980",
+      "createdAt": "2026-10-28T04:39:18.944Z",
+      "status": "En camino con motorizado",
+      "paymentMethod": "Payphone Ecuador",
+      "paymentDetails": {
+        "mode": "sandbox_simulator",
+        "success": true,
+        "paymentId": "PP-74899164",
+        "clientTransactionId": "LUMA-b3929bf9",
+        "authorizationCode": "757088",
+        "cardBrand": "VISA",
+        "lastDigits": "9010",
+        "currency": "USD",
+        "amount": 106,
+        "taxes": {
+          "subtotal": 92.17,
+          "tax": 13.83,
+          "total": 106,
+          "amountInCents": 10600,
+          "subtotalInCents": 9217,
+          "taxInCents": 1383
+        },
+        "message": "Transacción aprobada satisfactoriamente por Payphone Ecuador (Sandbox)"
+      },
+      "customer": {
+        "userId": "usr-demo-1",
+        "name": "Sofía Montalvo",
+        "email": "sofia@luma.ec",
+        "phone": "0998765432",
+        "address": "González Suárez y San Ignacio, Edificio Panorama Apt 4B",
+        "sector": "Quito urbano",
+        "city": "Quito",
+        "notes": ""
+      },
+      "items": [
+        {
+          "key": "0-item-0-1-M",
+          "lookId": 0,
+          "lookName": "Oficina, a tu manera",
+          "name": "Camisa fluida marfil",
+          "price": 28,
+          "size": "M",
+          "material": "70% viscosa, 30% lino",
+          "image": "assets/editorial.png",
+          "qty": 1
+        },
+        {
+          "key": "0-item-0-2-M",
+          "lookId": 0,
+          "lookName": "Oficina, a tu manera",
+          "name": "Pantalón recto negro",
+          "price": 36,
+          "size": "M",
+          "material": "95% poliéster, 5% elastano",
+          "image": "assets/editorial.png",
+          "qty": 1
+        },
+        {
+          "key": "1-item-1-1-M",
+          "lookId": 1,
+          "lookName": "De aquí para allá",
+          "name": "Blazer arena",
+          "price": 42,
+          "size": "M",
+          "material": "80% poliéster, 20% viscosa",
+          "image": "assets/editorial.png",
+          "qty": 1
+        }
+      ],
+      "subtotal": 106,
+      "shipping": 0,
+      "tax": 13.826086956521738,
+      "total": 106,
+      "updatedAt": "2026-10-28T05:14:16.130Z"
+    },
+    {
+      "id": "ord-429acc95",
+      "orderNumber": "LUMA-419695",
+      "createdAt": "2026-10-28T04:07:17.605Z",
+      "status": "En camino con motorizado",
+      "paymentMethod": "Payphone Ecuador",
+      "paymentDetails": {
+        "mode": "sandbox_simulator",
+        "success": true,
+        "paymentId": "PP-85928567",
+        "clientTransactionId": "LUMA-35a3be36",
+        "authorizationCode": "761895",
+        "cardBrand": "VISA",
+        "lastDigits": "9010",
+        "currency": "USD",
+        "amount": 83.5,
+        "taxes": {
+          "subtotal": 72.61,
+          "tax": 10.89,
+          "total": 83.5,
+          "amountInCents": 8350,
+          "subtotalInCents": 7261,
+          "taxInCents": 1089
+        },
+        "message": "Transacción aprobada satisfactoriamente por Payphone Ecuador (Sandbox)"
+      },
+      "customer": {
+        "userId": null,
+        "name": "jidfo",
+        "email": "sajdjd@gmail.com",
+        "phone": "diasjidsja",
+        "address": "asdjjsad",
+        "sector": "Quito urbano",
+        "city": "Quito",
+        "notes": "sajdjas"
+      },
+      "items": [
+        {
+          "key": "2-item-2-1-L",
+          "lookId": 2,
+          "lookName": "Un plan para ti",
+          "name": "Top de punto cacao",
+          "price": 26,
+          "size": "L",
+          "material": "60% algodón, 40% acrílico",
+          "image": "assets/editorial.png",
+          "qty": 1
+        },
+        {
+          "key": "2-item-2-2-L",
+          "lookId": 2,
+          "lookName": "Un plan para ti",
+          "name": "Falda midi negra",
+          "price": 32,
+          "size": "L",
+          "material": "95% poliéster, 5% elastano",
+          "image": "assets/editorial.png",
+          "qty": 1
+        },
+        {
+          "key": "2-item-2-3-Única",
+          "lookId": 2,
+          "lookName": "Un plan para ti",
+          "name": "Bolso pequeño de hombro",
+          "price": 22,
+          "size": "Única",
+          "material": "Exterior de poliuretano suave",
+          "image": "assets/editorial.png",
+          "qty": 1
+        }
+      ],
+      "subtotal": 80,
+      "shipping": 3.5,
+      "tax": 10.434782608695652,
+      "total": 83.5,
+      "updatedAt": "2026-10-28T05:14:14.736Z"
+    },
+    {
+      "id": "ord-29e4ade0",
+      "orderNumber": "LUMA-274548",
+      "createdAt": "2026-10-27T18:04:17.908Z",
+      "status": "Entregado con éxito",
+      "paymentMethod": "Payphone Ecuador",
+      "paymentDetails": {
+        "authorizationCode": "PP-894125",
+        "cardBrand": "VISA",
+        "lastDigits": "4242"
+      },
+      "customer": {
+        "userId": "usr-0dc4c438",
+        "name": "Valentina Carrera",
+        "email": "valentina@luma.ec",
+        "phone": "0998877665",
+        "address": "Av. República del Salvador y Moscú",
+        "sector": "Quito urbano",
+        "city": "Quito",
+        "notes": ""
+      },
+      "items": [
+        {
+          "price": 30,
+          "name": "Camisa de rayas azul",
+          "size": "M",
+          "qty": 1
+        },
+        {
+          "price": 38,
+          "name": "Jean recto azul medio",
+          "size": "M",
+          "qty": 1
+        }
+      ],
+      "subtotal": 68,
+      "shipping": 3.5,
+      "tax": 8.87,
+      "total": 71.5,
+      "updatedAt": "2026-10-28T04:35:08.381Z"
+    }
+  ],
+  "catalog": [
+    {
+      "id": 6,
+      "name": "Tarde en Guápulo",
+      "occasion": "Salida",
+      "pos": "50%",
+      "image": "assets/letras.png",
+      "note": "Elegancia relajada para un café con vista.",
+      "items": [
+        {
+          "id": "item-6-1",
+          "name": "Chaqueta de ante canela",
+          "price": 48,
+          "material": "100% poliéster tacto ante",
+          "type": "layer",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "id": "item-6-2",
+          "name": "Camiseta marfil de lino",
+          "price": 22,
+          "material": "100% lino natural",
+          "type": "top",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "id": "item-6-3",
+          "name": "Pantalón sastre tabaco",
+          "price": 36,
+          "material": "95% algodón, 5% elastano",
+          "type": "bottom",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        }
+      ],
+      "why": "Capas cálidas de punto y calzado plano para empedrados."
+    },
+    {
+      "id": 0,
+      "name": "Oficina, a tu manera",
+      "occasion": "Oficina",
+      "pos": "0%",
+      "image": "assets/editorial.png",
+      "note": "Líneas limpias. Una base que siempre suma.",
+      "items": [
+        {
+          "id": "item-0-1",
+          "name": "Camisa fluida marfil",
+          "price": 28,
+          "material": "70% viscosa, 30% lino",
+          "type": "top",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "id": "item-0-2",
+          "name": "Pantalón recto negro",
+          "price": 36,
+          "material": "95% poliéster, 5% elastano",
+          "type": "bottom",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "id": "item-0-3",
+          "name": "Bolso estructurado",
+          "price": 24,
+          "material": "Exterior poliuretano, forro algodón",
+          "type": "accessory",
+          "sizes": [
+            "Única"
+          ]
+        }
+      ],
+      "why": "El contraste marfil y negro crea una base versátil para el día a día corporativo en Quito."
+    },
+    {
+      "id": 1,
+      "name": "De aquí para allá",
+      "occasion": "Cotidiano",
+      "pos": "50%",
+      "image": "assets/editorial.png",
+      "note": "Capas ligeras para un día con mil planes.",
+      "items": [
+        {
+          "id": "item-1-1",
+          "name": "Blazer arena",
+          "price": 42,
+          "material": "80% poliéster, 20% viscosa",
+          "type": "layer",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "id": "item-1-2",
+          "name": "Camiseta blanca",
+          "price": 16,
+          "material": "100% algodón peinado",
+          "type": "top",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "id": "item-1-3",
+          "name": "Pantalón sastre arena",
+          "price": 34,
+          "material": "80% poliéster, 20% viscosa",
+          "type": "bottom",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        }
+      ],
+      "why": "Una capa estructurada y una camiseta relajada equilibran el conjunto para mañanas frescas y tardes soleadas."
+    },
+    {
+      "id": 2,
+      "name": "Un plan para ti",
+      "occasion": "Salida",
+      "pos": "100%",
+      "image": "assets/editorial.png",
+      "note": "Texturas cálidas. Una elegancia sin esfuerzo.",
+      "items": [
+        {
+          "id": "item-2-1",
+          "name": "Top de punto cacao",
+          "price": 26,
+          "material": "60% algodón, 40% acrílico",
+          "type": "top",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "id": "item-2-2",
+          "name": "Falda midi negra",
+          "price": 32,
+          "material": "95% poliéster, 5% elastano",
+          "type": "bottom",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "id": "item-2-3",
+          "name": "Bolso pequeño de hombro",
+          "price": 22,
+          "material": "Exterior de poliuretano suave",
+          "type": "accessory",
+          "sizes": [
+            "Única"
+          ]
+        }
+      ],
+      "why": "El cacao aporta calidez a la base negra. Combina con calzado cómodo o mocasines para un look nocturno en La Floresta."
+    },
+    {
+      "id": 3,
+      "name": "Malasaña, sin prisa",
+      "occasion": "Cotidiano",
+      "pos": "50%",
+      "image": "assets/malasana.png",
+      "note": "Rayas, denim y un paseo sin reloj.",
+      "items": [
+        {
+          "id": "item-3-1",
+          "name": "Camisa de rayas azul",
+          "price": 30,
+          "material": "100% algodón popelín",
+          "type": "top",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "id": "item-3-2",
+          "name": "Jean recto azul medio",
+          "price": 38,
+          "material": "99% algodón, 1% elastano",
+          "type": "bottom",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "id": "item-3-3",
+          "name": "Bandolera coñac",
+          "price": 25,
+          "material": "Poliuretano acabado cuero",
+          "type": "accessory",
+          "sizes": [
+            "Única"
+          ]
+        }
+      ],
+      "why": "Inspiración urbana madrileña: camisa relajada, denim recto y calzado plano. Perfecta para caminar por el centro norte de Quito."
+    },
+    {
+      "id": 4,
+      "name": "Una tarde en Las Letras",
+      "occasion": "Salida",
+      "pos": "50%",
+      "image": "assets/letras.png",
+      "note": "Un vestido sencillo. Un acento burdeos.",
+      "items": [
+        {
+          "id": "item-4-1",
+          "name": "Vestido midi negro",
+          "price": 44,
+          "material": "95% algodón rib, 5% elastano",
+          "type": "dress",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "id": "item-4-2",
+          "name": "Cárdigan ligero marfil",
+          "price": 29,
+          "material": "100% algodón suave",
+          "type": "layer",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "id": "item-4-3",
+          "name": "Bolso burdeos estructurado",
+          "price": 24,
+          "material": "Poliuretano grabado premium",
+          "type": "accessory",
+          "sizes": [
+            "Única"
+          ]
+        }
+      ],
+      "why": "El vestido negro y el bolso burdeos dan carácter inmediato. El cárdigan protege al caer la noche en la sierra."
+    },
+    {
+      "id": 5,
+      "name": "Chamberí en capas",
+      "occasion": "Oficina",
+      "pos": "50%",
+      "image": "assets/chamberi.png",
+      "note": "Sastrería relajada para tu agenda real.",
+      "items": [
+        {
+          "id": "item-5-1",
+          "name": "Blazer ligero azul marino",
+          "price": 45,
+          "material": "55% lino, 45% viscosa",
+          "type": "layer",
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "id": "item-5-2",
+          "name": "Camiseta blanca esencial",
+          "price": 16,
+          "material": "100% algodón pima",
+          "type": "top",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "id": "item-5-3",
+          "name": "Pantalón recto crudo",
+          "price": 35,
+          "material": "98% algodón, 2% elastano",
+          "type": "bottom",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
+        },
+        {
+          "id": "item-5-4",
+          "name": "Bolso compacto caramelo",
+          "price": 26,
+          "material": "Poliuretano texturizado",
+          "type": "accessory",
+          "sizes": [
+            "Única"
+          ]
+        }
+      ],
+      "why": "Sastrería sin rigidez: blazer ligero que acompaña mañanas frescas y se retira al mediodía."
+    }
+  ],
+  "settings": {
+    "announcement": {
+      "city": "QUITO · MADRID",
+      "text": "✧ Nueva Cápsula de Temporada Activa · Pagos 100% seguros con Payphone",
+      "tag": "ENVÍOS GRATIS DESDE "
+    },
+    "hero": {
+      "eyebrow": "TEMPORADA 2026 / MADRID → QUITO",
+      "eyebrowColor": "#495342",
+      "title": "Menos dudas.<br>Más <em>tú.</em>",
+      "subtitle": "Prendas esenciales y capas inteligentes para el clima de Quito.",
+      "image": "assets/editorial.png",
+      "cardTitle": "Colección Inteligente",
+      "cardSubtitle": "Piezas modulares para Quito",
+      "titleFont": "'Playfair Display', Georgia, serif",
+      "subtitleFont": "'DM Sans', sans-serif",
+      "titleSize": "44px",
+      "titleColor": "#191c18",
+      "subtitleColor": "#6a6f66"
+    },
+    "shippingRates": {
+      "Quito urbano": 3.5,
+      "Cumbayá / Tumbaco": 4.5,
+      "Los Chillos": 5,
+      "Nacional (Ecuador)": 6.5
+    },
+    "freeShippingThreshold": 90
+  }
+}

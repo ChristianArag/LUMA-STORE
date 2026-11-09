@@ -1,0 +1,19 @@
+{
+  "name": "luma-store",
+  "version": "1.0.0",
+  "description": "LUMA - Tienda de Moda y Asesoría de Estilo con Intención (Quito, Ecuador)",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "keywords": ["fashion", "ecommerce", "payphone", "quito", "madrid"],
+  "author": "LUMA Team",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
